@@ -12,6 +12,7 @@ class RestaurantServiceTest {
     RestaurantService service = new RestaurantService();
     Restaurant restaurant;
     //REFACTOR ALL THE REPEATED LINES OF CODE
+    @BeforeEach
     public void addInitialRestaurant(){
         LocalTime openingTime = LocalTime.parse("10:30:00");
         LocalTime closingTime = LocalTime.parse("22:00:00");
