@@ -4,6 +4,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import java.time.LocalTime;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -70,4 +71,14 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    //<<<<<<<<<<<<<<<<<<<<<<<Getting Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void order_value_should_be_380_when_SweetCornSoup_and_Vegetable_lasagne_are_ordered() throws restaurantNotFoundException{
+        int totalCost;
+        List<String> selectedItems = null;
+        assertEquals(1, selectedItems.size());
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<Getting Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 }
