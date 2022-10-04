@@ -4,6 +4,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import java.time.LocalTime;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -75,9 +76,15 @@ class RestaurantTest {
     //<<<<<<<<<<<<<<<<<<<<<<<Getting Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     @Test
     public void order_value_should_be_380_when_SweetCornSoup_and_Vegetable_lasagne_are_ordered() throws restaurantNotFoundException{
-        int totalCost;
-        List<String> selectedItems = null;
-        assertEquals(1, selectedItems.size());
+        // Arrange order items
+        List<String> orderItems = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
+
+        // find total order value
+        int totalOrderValue = restaurant.getOrderValue(orderItems);
+
+        // Assertion
+        assertEquals(totalOrderValue, 388);
+
     }
     //<<<<<<<<<<<<<<<<<<<<<<<Getting Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
